@@ -42,7 +42,7 @@ body{
 
 }
 .TitleText p{
-  font-family: cursive;
+  font-family: cursive, Arial;
   text-decoration: none;
   font-style: italic;
   text-shadow: 2px 2px 1px Black;
