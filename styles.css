@@ -42,7 +42,7 @@ body{
 
 }
 .TitleText p{
-  font-family: cursive, Arial;
+  font-family: cursive, arial;
   text-decoration: none;
   font-style: italic;
   text-shadow: 2px 2px 1px Black;
@@ -219,7 +219,7 @@ body{
 
 }
 .myBio{
-  width: 900px;
+  max-width: 900px;
   text-align: justify;
   margin-left: 25%;
   margin-right: auto;
@@ -240,7 +240,6 @@ body{
 
   border: 3px solid green;
 }
-
 
 
 .skillsTable{
@@ -420,6 +419,7 @@ body{
 .bookPics{
   width: 300px;
   height: 440px;
+  overflow-x: auto;
 }
 .bookShowcase{
   margin-left: auto;
@@ -427,6 +427,7 @@ body{
   text-align: center;
 
 }
+
 .bookHeadingPic{
   position: relative;
   display: block;
@@ -483,9 +484,7 @@ body{
 .recapDetails{
   padding-bottom: 100px;
 }
-.formDiv{
 
-}
 .ContactMeForm{
   border: 2px gray;
   padding-left: 10px;
@@ -593,17 +592,19 @@ z-index: 50;
   position: fixed;
   z-index: 50;
 }
+#mySidenav img{
 
+}
 #mySidenav a {
-  position: absolute; 
-  left: -90px; 
-  transition: 0.3s; 
+  position: absolute;
+  left: -90px;
+  transition: 0.3s;
   padding: 15px;
-  width: 110px; 
-  text-decoration: none; 
-  font-size: 20px; 
-  color: white; 
-  border-radius: 0 5px 5px 0; 
+  width: 110px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
   margin-top: 200px;
 
 }
@@ -616,11 +617,10 @@ z-index: 50;
 
 
 #mySidenav a:hover {
-  left: -10px; /* On mouse-over, make the elements appear as they should */
+  left: -10px;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 
 }
-
 
 #menuBars {
   top: -40px;
@@ -645,3 +645,168 @@ z-index: 50;
   top: 200px;
   background-color: #555 /* Light Black */
 }
+.smallScreenTable{
+  display: none;
+}
+
+/*changes based on screen size less that 760px and below 1024px*/
+@media
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+  body {
+    background-color: #F5CF8E; /* Yellow */
+
+  }
+  .myBio{
+    transition: .3s;
+    max-width: 70%;
+    margin-left: 12%;
+
+  }
+  .TitleText p{
+    line-height: 15px;
+    font-family: arial;
+  }
+  .TitleText h1{
+    line-height: 15px;
+    font-size: 50px;
+  }
+  .infoText{
+    font-size: 11px;
+  }*/
+  .sectionHeading{
+    border: 3px solid #3AA0A5;
+    border-spacing: 10px;
+    display: block;
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 0;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 5px 20px;
+
+
+  }
+
+	/* change parts of table to blocks. Probabaly a better way to do this part... */
+
+  .smallScreenTable table{
+    display: block;
+  }
+  .smallScreenTable thead{
+    display: block;
+  }
+  .smallScreenTable tbody{
+    display: block;
+  }
+  .smallScreenTable th{
+    display: block;
+
+  }
+  .smallScreenTable td{
+    display: block;
+  }
+  .smallScreenTable tr {
+    display: block;
+  }
+
+
+
+	/* move table headers off screen*/
+	.smallScreenTable thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+
+
+	.smallScreenTable td {
+		/* make td morel like rows */
+		border: none;
+		position: relative;
+
+	}
+
+	.smallScreenTable td:before {
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+	}
+  /*show table for small screens*/
+  .smallScreenTable{
+    transition: .3s;
+    display: block;
+  }
+  /*hide table for bigger screens*/
+  .bigScreenTable{
+    transition: .3s;
+    display: none;
+  }
+  .bookShowcase{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .recapContact{
+    display: block;
+  }
+  .recapContact table{
+    display: block;
+  }
+  .recapContact thead{
+    display: block;
+  }
+  .recapContact tbody{
+    display: block;
+  }
+  .recapContact th{
+    display: block;
+
+  }
+  .recapContact td{
+
+  }
+  .seperator{
+    display: block;
+
+  }
+  .recapContact tr {
+    display: block;
+  }
+  .recapContact td {
+    border: none;
+    position: relative;
+
+  }
+  .recapContact thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+
+  .myInfo tr{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+  .myInfo td{
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+  .myInfo{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
