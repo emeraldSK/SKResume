@@ -408,6 +408,7 @@ body{
 }
 .thumbnail{
   width: 300px;
+max-width: 450;
 }
 .thumbnail:hover{
   transform: scale(1.5);
