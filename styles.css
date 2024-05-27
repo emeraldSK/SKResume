@@ -408,7 +408,7 @@ body{
 }
 .thumbnail{
   width: 300px;
-max-width: 400px;
+max-height: 450px;
 }
 .thumbnail:hover{
   transform: scale(1.5);
